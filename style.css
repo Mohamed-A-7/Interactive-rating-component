@@ -1,0 +1,146 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  /* ### Primary */
+  --Orange: hsl(25, 97%, 53%);
+
+  /* ### Neutral */
+  --White: hsl(0, 0%, 100%);
+  --Light-Grey: hsl(217, 12%, 63%);
+  --Dark-Blue: hsl(213, 19%, 18%);
+  --Very-Dark-Blue: hsl(216, 12%, 8%);
+}
+
+body {
+  font-family: "Montserrat";
+  background-color: rgb(20 21 25);
+}
+
+.main {
+  background-color: rgb(32 39 49);
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  padding: 28px;
+  width: 430px;
+  border-radius: 20px;
+}
+
+.main.card-rate > *:not(.submit) {
+  margin-bottom: 25px;
+}
+
+.main.card-rate .star {
+  background-color: var(--Dark-Blue);
+  padding: 18px;
+  border-radius: 50%;
+}
+
+.main.card-rate .head {
+  color: var(--White);
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+.main.card-rate p {
+  font-size: 15px;
+  color: var(--Light-Grey);
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+.main.card-rate .rate {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.main.card-rate .rate button {
+  border-radius: 50%;
+  width: 55px;
+  height: 55px;
+  border: none;
+  font-size: 19px;
+  color: var(--Light-Grey);
+  background-color: var(--Dark-Blue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.4s;
+  cursor: pointer;
+}
+
+.main.card-rate .rate button.clicked {
+  background-color: var(--White);
+  color: var(--Very-Dark-Blue);
+}
+
+.main.card-rate .rate button:hover {
+  background-color: var(--Orange);
+  color: var(--Very-Dark-Blue);
+}
+
+.main.card-rate .submit {
+  background-color: var(--Orange);
+  width: 100%;
+  border: none;
+  border-radius: 20px;
+  padding: 11px;
+  color: var(--Very-Dark-Blue);
+  font-weight: 700;
+  letter-spacing: 3px;
+  font-size: 0.9em;
+  transition: 0.4s;
+}
+
+.main.card-rate .submit:hover {
+  cursor: pointer;
+  background-color: var(--White);
+  color: var(--Very-Dark-Blue);
+}
+
+/* ================================================= */
+
+.main.thanks-card {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+  width: 410px;
+  text-align: center;
+  z-index: -1;
+}
+
+.main.thanks-card .your-rate {
+  color: var(--Orange);
+  background-color: var(--Dark-Blue);
+  padding: 6px 25px;
+  border-radius: 20px;
+  font-size: 14px;
+}
+
+.main.thanks-card .thank {
+  color: var(--White);
+  font-weight: 400;
+}
+
+.main.thanks-card .thanks-word {
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--Light-Grey);
+  line-height: 1.5;
+}
+
+@media (max-width: 500px) {
+  .main.card-rate {
+    width: 375px;
+  }
+  .main.thanks-card {
+    width: 350px;
+  }
+}
